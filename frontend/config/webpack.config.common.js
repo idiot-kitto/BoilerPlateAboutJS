@@ -21,28 +21,35 @@ module.exports = {
                 exclude: /node_modules/,
             },
             {
-                test: /\.(png|jpe?g|gif|svg|ico)$/,
-                use: [
-                    {
-                        loader: 'file-loader',
-                        options: {
-                            publicPath: '/',
-                            name: '[name].[ext]?[hash]',
-                        },
-                    },
-                ],
-            },
-            {
-                test: /\.(png|jpe?g|gif|svg|ico)$/,
-                use: {
-                    loader: 'url-loader',
-                    options: {
-                        publicPath: '/',
-                        name: '[name].[ext]?[hash',
-                        limit: 5000,
-                    },
+                test: /\.(jpg|jpeg|png|gif|ico)$/,
+                type: 'asset/resource',
+                generator: {
+                  filename: 'images/[name][ext]',
                 },
             },
+            // {
+            //     test: /\.(png|jpe?g|gif|svg|ico)$/,
+            //     use: [
+            //         {
+            //             loader: 'file-loader',
+            //             options: {
+            //                 publicPath: '/',
+            //                 name: '[name].[ext]?[hash]',
+            //             },
+            //         },
+            //     ],
+            // },
+            // {
+            //     test: /\.(png|jpe?g|gif|svg|ico)$/,
+            //     use: {
+            //         loader: 'url-loader',
+            //         options: {
+            //             publicPath: '/',
+            //             name: '[name].[ext]?[hash]',
+            //             limit: 5000,
+            //         },
+            //     },
+            // },
         ],
     },
     plugins: [

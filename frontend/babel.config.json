@@ -12,5 +12,6 @@
     ],
     "plugins": [
         "@babel/plugin-proposal-class-properties"
+        // 클래스 상속시 field가 undefined 나는 에러를 잡는 plugin
     ]
 }

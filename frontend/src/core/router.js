@@ -1,4 +1,5 @@
-import MainPage from '../pages/index.js';
+import MainPage from '../pages/MainPage/index.js';
+import KakaoMap from '../pages/Map/map.js';
 
 const pathToRegex = path => new RegExp('^' + path.replace(/\//g, '\\/').replace(/:\w+/g, '(.+)') + '$');
 
@@ -10,6 +11,7 @@ const navigateTo = (url, props = null) => {
 const router = () => {
     const routes = [
         { path: '/', view: MainPage },
+        { path: '/second', view: KakaoMap },
     ];
 
     const potentialMatches = routes.map(route => {
