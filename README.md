@@ -5,7 +5,7 @@
   - config : webpack 구성
   - src
     - components : 재사용 컴포넌트 관리
-    - core : 페이지 라우팅
+    - core : 페이지 라우팅 ( SPA )
     - pages : 기능별로 구성하기
       - js파일, scss파일
     - static 
